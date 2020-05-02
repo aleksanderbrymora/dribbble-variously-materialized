@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Baloo Tamma 2", cursive;
+}
+
+body {
+  background-color: #ffeeda;
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.main-container {
+  background-color: #ffe8a8;
+  border: 4px solid black;
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 7fr 3fr;
+      grid-template-columns: 2fr 7fr 3fr;
+}
+
+.main-container #col-1,
+.main-container #col-2 {
+  border-right: 2px solid black;
+}
+
+.main-container .col {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+}
+
+.main-container #col-1 {
+  -ms-grid-rows: 13rem auto 10rem;
+      grid-template-rows: 13rem auto 10rem;
+}
+
+.main-container #col-1 > div,
+.main-container #col-1 nav {
+  padding: 0.5rem 0.5rem 0.5rem 3rem;
+}
+
+.main-container #col-1 > div:first-child {
+  border-bottom: 2px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.main-container #col-1 > div:first-child h1 {
+  font-weight: normal;
+}
+
+.main-container #col-1 nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-container #col-1 nav ul {
+  list-style-type: none;
+}
+
+.main-container #col-1 nav ul li {
+  margin: 0.5rem 0;
+}
+
+.main-container #col-1 nav ul li a {
+  font-size: 110%;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.main-container #col-1 .share-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-container #col-1 .share-buttons p {
+  border-bottom: 2px solid black;
+  width: calc(100% - 3rem);
+}
+
+.main-container #col-1 .share-buttons > div {
+  margin-top: 0.7rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (25px)[3];
+      grid-template-columns: repeat(3, 25px);
+  -ms-grid-rows: 25px;
+      grid-template-rows: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: left;
+  gap: 0.5rem;
+}
+
+.main-container #col-1 .share-buttons > div img,
+.main-container #col-1 .share-buttons > div a {
+  height: 25px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-container #col-1 .share-buttons > div img a:hover,
+.main-container #col-1 .share-buttons > div a a:hover {
+  font-size: 105%;
+}
+
+.main-container #col-1 .share-buttons > div > div {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container #col-2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 13rem 5fr 2fr;
+      grid-template-rows: 13rem 5fr 2fr;
+}
+
+.main-container #col-2 .row1 ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  height: 100%;
+  padding: 1rem 2rem;
+}
+
+.main-container #col-2 .row1 ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1rem;
+}
+
+.main-container #col-2 .row1 ul li h2 {
+  line-height: 120%;
+  font-size: 120%;
+}
+
+.main-container #col-2 .row1 ul li h3 {
+  font-size: 100%;
+}
+
+.main-container #col-2 .row1 ul li .number {
+  font-size: 200%;
+  margin-right: 1rem;
+}
+/*# sourceMappingURL=style.css.map */

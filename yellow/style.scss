@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap');
+
+$border-sm: 2px;
+$border-lg: 4px;
+$padding-sm: 0.5rem;
+$padding-lg: 3rem;
+$fonts: 'Baloo Tamma 2', cursive;
+$top-row-height: 13rem;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: $fonts;
+}
+
+body {
+	background-color: #ffeeda;
+	width: 100vw;
+	height: 100vh;
+	padding: 1rem;
+}
+
+.main-container {
+	background-color: #ffe8a8;
+	border: $border-lg solid black;
+	width: 100%;
+	height: 100%;
+
+	display: grid;
+	grid-template-columns: 2fr 7fr 3fr;
+
+	#col-1,
+	#col-2 {
+		border-right: $border-sm solid black;
+	}
+
+	.col {
+		height: 100%;
+		display: grid;
+	}
+
+	#col-1 {
+		grid-template-rows: $top-row-height auto 10rem;
+
+		// General settings for both
+		> div,
+		nav {
+			padding: $padding-sm $padding-sm $padding-sm $padding-lg;
+		}
+
+		// First row
+		> div:first-child {
+			border-bottom: $border-sm solid black;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+
+			h1 {
+				font-weight: normal;
+			}
+		}
+
+		// Second row
+		nav {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			ul {
+				list-style-type: none;
+
+				li {
+					margin: 0.5rem 0;
+
+					a {
+						font-size: 110%;
+						color: black;
+						font-weight: bold;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+
+		// Third row
+		.share-buttons {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			p {
+				border-bottom: $border-sm solid black;
+				width: calc(100% - 3rem);
+			}
+
+			> div {
+				$icon-dimension: 25px;
+				margin-top: 0.7rem;
+				display: grid;
+				grid-template-columns: repeat(3, $icon-dimension);
+				grid-template-rows: $icon-dimension;
+				align-items: center;
+				justify-items: left;
+				gap: 0.5rem;
+				img,
+				a {
+					height: $icon-dimension;
+					transition: all 0.3s ease-in-out;
+					a:hover {
+						font-size: 105%;
+					}
+				}
+				> div {
+					height: 100%;
+					width: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+			}
+		}
+	}
+
+	#col-2 {
+		display: grid;
+		grid-template-rows: $top-row-height 5fr 2fr;
+
+		.row1 ul {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			height: 100%;
+			padding: 1rem 2rem;
+
+			li {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin: 1rem;
+
+				h2 {
+					line-height: 120%;
+					font-size: 120%;
+				}
+
+				h3 {
+					font-size: 100%;
+				}
+
+				.number {
+					font-size: 200%;
+					margin-right: 1rem;
+				}
+			}
+		}
+	}
+}
