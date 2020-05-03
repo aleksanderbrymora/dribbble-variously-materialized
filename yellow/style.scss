@@ -190,9 +190,9 @@ body {
 				.card {
 					background-color: black;
 					padding: $padding-sm;
-					display: flex;
+					display: grid;
 					height: 100%;
-					flex-direction: column;
+					grid-template-rows: auto 20rem;
 					justify-content: space-between;
 					box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 
@@ -227,7 +227,7 @@ body {
 
 					img {
 						width: 100%;
-						height: 20rem;
+						height: 100%;
 						object-fit: cover;
 						object-position: center;
 					}
@@ -238,22 +238,130 @@ body {
 		.row3 {
 			display: flex;
 			align-items: center;
-			padding: 2rem;
+			padding: 0 10rem 0 3rem;
 			justify-content: space-between;
 
 			.description-text {
-				// padding-right: ;
+				padding-right: 6rem;
+
+				h4 {
+					width: 40%;
+					font-size: 120%;
+				}
+
+				h5 {
+					text-align: right;
+					font-weight: bold;
+					font-style: italic;
+					font-size: 100%;
+				}
+
+				p {
+					line-height: 190%;
+				}
+
+				.big-letter {
+					font-size: 300%;
+					margin: 0 0.5rem;
+				}
 			}
 
-			.social-table ul {
-				list-style: none;
+			.social-table table {
+				border-collapse: collapse;
 
-				li {
-					height: 1rem;
+				tr td {
+					height: 2.5rem;
+					width: 12rem;
+					border: solid 2px;
+					text-align: center;
+
 					img {
-						height: 100%;
+						height: 1rem;
+						display: block;
+						margin: auto;
 					}
 				}
+			}
+		}
+	}
+
+	#col-3 {
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+
+		.row-1 {
+			border-bottom: $border-sm solid black;
+
+			> img {
+				width: 100%;
+			}
+
+			> div {
+				padding: 2rem;
+
+				h3 {
+					font-size: 150%;
+				}
+
+				.date {
+					margin: 0.5rem 0;
+					font-style: italic;
+					font-size: 90%;
+				}
+			}
+		}
+
+		.row-2 {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			.divider {
+				margin: 0.5rem 0 2rem;
+				border-bottom: 1px solid black;
+				height: 1px;
+				width: 3rem;
+			}
+
+			form {
+				width: calc(100% - 8rem);
+				input,
+				button {
+					border: none;
+					background-color: transparent;
+					border-bottom: $border-sm solid black;
+					width: 100%;
+					margin: 0.5rem 0;
+					padding: 0.5rem 0;
+				}
+
+				.inline-inputs {
+					width: 100%;
+					display: flex;
+					justify-content: space-between;
+					input {
+						width: 48%;
+					}
+				}
+
+				button {
+					width: initial;
+					display: block;
+					margin: auto;
+					font-size: 120%;
+					margin-top: 2rem;
+				}
+			}
+
+			> p {
+				margin-top: 5rem;
+				width: calc(100% - 8rem);
+				text-align: center;
+				border-top: 1px solid black;
+				padding: 0.5rem 0;
+				text-transform: uppercase;
+				font-size: 80%;
 			}
 		}
 	}
