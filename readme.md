@@ -11,4 +11,8 @@ I did NOT design these projects. I simply rewrote and adapted them to work in th
 
 ## Projects materialized
 
+_Click on the title on the left to view the effect_
+
+_Click on the credits to view the design_
+
 1. Yellow - [Surreal Blog by ilo chani](https://dribbble.com/shots/11146640-Surreal-Blog)
